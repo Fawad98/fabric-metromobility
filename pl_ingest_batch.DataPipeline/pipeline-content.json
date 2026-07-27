@@ -5,7 +5,8 @@
         "type": "TridentNotebook",
         "typeProperties": {
           "notebookId": "b6caa6f4-68b2-95fe-449f-e05f41109b0e",
-          "workspaceId": "00000000-0000-0000-0000-000000000000"
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "metromobility_bronze"
         },
         "policy": {
           "timeout": "0.12:00:00",
@@ -21,7 +22,8 @@
         "type": "TridentNotebook",
         "typeProperties": {
           "notebookId": "8f24ab25-3e42-a8d9-41b2-99b3b8bbab1a",
-          "workspaceId": "00000000-0000-0000-0000-000000000000"
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "sessionTag": "metromobility_bronze"
         },
         "policy": {
           "timeout": "0.12:00:00",
