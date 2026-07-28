@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "sm_mobility"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a2746b78-b2ad-a100-4d22-95622b4e49d5"
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "sources": [
+    {
+      "id": "f916275c-e50a-4fa7-b9ae-01ac2496b451",
+      "name": "CustomEndpoint-Source",
+      "type": "CustomEndpoint",
+      "properties": {}
+    }
+  ],
+  "destinations": [
+    {
+      "id": "23206849-17c3-412d-939a-7260a4406bec",
+      "name": "act_surge_alert",
+      "type": "Activator",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "93dbafb2-4f65-a541-4c79-1cfb64b97a09",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "es_ride_telemetry-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "es_ride_telemetry-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "ride_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "event_ts",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "pickup_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dropoff_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "status",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "surge_multiplier",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "eta_minutes",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "fare_estimate",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2c1ce6bf-fac1-438c-abb1-6f873005ebb5",
+      "name": "dst_lakehouse",
+      "type": "Lakehouse",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "d6f5e54e-cec3-b160-406d-bc8340eb20df",
+        "schema": "bronze",
+        "deltaTable": "ride_events_stream",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "es_ride_telemetry-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "es_ride_telemetry-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "ride_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "event_ts",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "pickup_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dropoff_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "status",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "surge_multiplier",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "eta_minutes",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "fare_estimate",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fc0a5371-1d11-4f27-8a7b-21baf6217add",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "DirectIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "d2a66357-7c15-889e-4f49-91a99f5fa191",
+        "tableName": "ride_events",
+        "connectionName": null,
+        "mappingRuleName": null
+      },
+      "inputNodes": [
+        {
+          "name": "es_ride_telemetry-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "es_ride_telemetry-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "ride_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "event_ts",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "pickup_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "dropoff_zone_id",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "status",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "surge_multiplier",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "eta_minutes",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "fare_estimate",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "3469ecc0-9866-430a-a69e-616675564aa8",
+      "name": "es_ride_telemetry-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "CustomEndpoint-Source"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

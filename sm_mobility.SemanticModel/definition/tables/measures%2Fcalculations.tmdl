@@ -1,0 +1,52 @@
+table measures/calculations
+	lineageTag: bf01133d-3980-48a0-9709-8e7b46af3417
+
+	measure 'Total Revenue' = ```
+			SUM(fact_trips[total_amount])
+			
+			```
+		lineageTag: ce2bae3b-12d7-4510-a5ac-436d5aa8d48f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Trips' = COUNTROWS(fact_trips)
+		formatString: 0
+		lineageTag: c06e22ed-d1b4-4141-8534-e86309654885
+
+	measure 'Avg Fare' = DIVIDE([Total Revenue], [Total Trips])
+		lineageTag: 8c76c521-a571-4e76-b623-d868e126ef25
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue MoM %' =
+			
+			VAR prev = CALCULATE([Total Revenue], DATEADD(dim_date[date_key], -1, MONTH))
+			RETURN DIVIDE([Total Revenue] - prev, prev)
+		lineageTag: 7567f857-2a3c-4832-b110-f523af7d3f32
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Weekend Trip Share' =
+			
+			DIVIDE(CALCULATE([Total Trips], dim_date[is_weekend] = TRUE()), [Total Trips])
+		lineageTag: fa883079-de3f-4bfc-b5f3-696a61e99e5d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: b03e225c-f587-42e4-b911-bb3429a18386
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition measures/calculations = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 04bf67d028d2429996f933306a2aef0f
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
