@@ -70,6 +70,8 @@ print("zone lookup saved")
 
 # CELL ********************
 
+for schema in ["bronze", "silver", "gold"]:
+    spark.sql(f"CREATE SCHEMA IF NOT EXISTS {schema}")
 
 # METADATA ********************
 
