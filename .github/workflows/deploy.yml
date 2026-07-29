@@ -1,0 +1,31 @@
+name: fabric-ci
+
+on:
+  push:
+    branches: [main]
+    paths: ["fabric/**"]
+  workflow_dispatch:
+
+jobs:
+  validate-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Fabric CLI
+        run: pip install ms-fabric-cli
+
+      - name: Authenticate as service principal
+        run: fab auth login -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Smoke test - list dev workspace
+        run: fab ls "ws-metromobility-dev.Workspace"
+
+      - name: Trigger batch pipeline
+        run: fab run "ws-metromobility-dev.Workspace/pl_ingest_batch.DataPipeline"
