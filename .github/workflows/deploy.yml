@@ -21,6 +21,9 @@ jobs:
       - name: Install Fabric CLI
         run: pip install ms-fabric-cli
 
+      - name: Enable plaintext token fallback (CI has no keyring)
+        run: fab config set encryption_fallback_enabled true
+
       - name: Authenticate as service principal
         run: fab auth login -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
 
