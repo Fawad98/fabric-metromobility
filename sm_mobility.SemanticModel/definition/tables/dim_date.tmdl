@@ -1,9 +1,11 @@
 table dim_date
 	lineageTag: d6487c96-84e6-4ae9-a4cd-f1faac1225d2
 	sourceLineageTag: [gold].[dim_date]
+	dataCategory: Time
 
 	column date_key
 		dataType: dateTime
+		isKey
 		formatString: General Date
 		lineageTag: 2cbb6564-6c2b-4655-a91c-be88f2465386
 		sourceLineageTag: date_key
@@ -38,6 +40,9 @@ table dim_date
 		sourceLineageTag: month_name
 		summarizeBy: none
 		sourceColumn: month_name
+		sortByColumn: month
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -57,6 +62,9 @@ table dim_date
 		sourceLineageTag: day_name
 		summarizeBy: none
 		sourceColumn: day_name
+		sortByColumn: day_of_week
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

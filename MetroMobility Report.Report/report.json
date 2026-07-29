@@ -1,0 +1,135 @@
+{
+  "config": "{\"version\":\"5.75\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU07\",\"type\":2,\"version\":{\"visual\":\"2.11.0\",\"report\":\"3.4.0\",\"page\":\"2.3.1\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU07",
+            "path": "BaseThemes/CY26SU07.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Demand Pattern",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "0617b30c56bd8cc000e5",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0935667122b02d7d0884\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":96,\"z\":2000,\"width\":704,\"height\":624,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"fact_trips.pickup_hour\",\"active\":true}],\"Values\":[{\"queryRef\":\"measures/calculations.Total Trips\"}],\"Columns\":[{\"queryRef\":\"dim_date.day_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_trips\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Trips\"},\"Name\":\"measures/calculations.Total Trips\",\"NativeReferenceName\":\"Total Trips\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"pickup_hour\"},\"Name\":\"fact_trips.pickup_hour\",\"NativeReferenceName\":\"Ride Hour\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"day_name\"},\"Name\":\"dim_date.day_name\",\"NativeReferenceName\":\"Day of Week\"}]},\"columnProperties\":{\"fact_trips.pickup_hour\":{\"displayName\":\"Ride Hour\"},\"dim_date.day_name\":{\"displayName\":\"Day of Week\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"measures/calculations\"}},\"Property\":\"Total Trips\"}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'minColor'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'maxColor'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"measures/calculations.Total Trips\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'MoM Revenue Trend'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 624.00,
+          "width": 704.00,
+          "x": 0.00,
+          "y": 96.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"99eb614f23c92b523619\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":496,\"height\":96,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Demand Patterns\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"42pt\",\"textDecoration\":\"underline\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 96.00,
+          "width": 496.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f8606799951179e67058\",\"layouts\":[{\"id\":0,\"position\":{\"x\":704,\"y\":96,\"z\":4000,\"width\":576,\"height\":624,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_date.is_weekend\",\"active\":true}],\"Y\":[{\"queryRef\":\"measures/calculations.Total Trips\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"is_weekend\"},\"Name\":\"dim_date.is_weekend\",\"NativeReferenceName\":\"is_weekend\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Trips\"},\"Name\":\"measures/calculations.Total Trips\",\"NativeReferenceName\":\"Total Trips\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Trips\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Weekend Trip Share'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 624.00,
+          "width": 576.00,
+          "x": 704.00,
+          "y": 96.00,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Executive Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c607f4f8c252c494c800",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2cbbc00084b356938462\",\"layouts\":[{\"id\":0,\"position\":{\"x\":320,\"y\":96,\"z\":1000,\"width\":312,\"height\":168,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measures/calculations.Total Trips\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Trips\"},\"Name\":\"measures/calculations.Total Trips\",\"NativeReferenceName\":\"Total Trips\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Trips\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 168.00,
+          "width": 312.00,
+          "x": 320.00,
+          "y": 96.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"67ba10a57b7388d652c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":96,\"z\":5000,\"width\":312,\"height\":168,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measures/calculations.Avg Fare\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Avg Fare\"},\"Name\":\"measures/calculations.Avg Fare\",\"NativeReferenceName\":\"Avg Fare\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Avg Fare\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 168.00,
+          "width": 312.00,
+          "x": 640.00,
+          "y": 96.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"76baf1abd403ce000129\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":96,\"z\":0,\"width\":312,\"height\":168,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measures/calculations.Total Revenue\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Revenue\"},\"Name\":\"measures/calculations.Total Revenue\",\"NativeReferenceName\":\"Total Revenue\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 168.00,
+          "width": 312.00,
+          "x": 0.00,
+          "y": 96.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"9efe40c04b688348a554\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":3000,\"width\":1024,\"height\":96,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"MetroMobility — Executive Overview\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"42pt\",\"textDecoration\":\"underline\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 96.00,
+          "width": 1024.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"a24b111730e3e3d04a34\",\"layouts\":[{\"id\":0,\"position\":{\"x\":704,\"y\":288,\"z\":4000,\"width\":576,\"height\":432,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_zone.borough\",\"active\":true}],\"Y\":[{\"queryRef\":\"measures/calculations.Total Revenue\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_zone\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"borough\"},\"Name\":\"dim_zone.borough\",\"NativeReferenceName\":\"borough\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Revenue\"},\"Name\":\"measures/calculations.Total Revenue\",\"NativeReferenceName\":\"Total Revenue\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Revenue\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 432.00,
+          "width": 576.00,
+          "x": 704.00,
+          "y": 288.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"b18318099273cd334104\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":288,\"z\":2000,\"width\":704,\"height\":432,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"measures/calculations.Revenue MoM %\"}],\"Category\":[{\"queryRef\":\"dim_date.month\",\"active\":true},{\"queryRef\":\"dim_date.month_name\",\"active\":true}],\"Y2\":[{\"queryRef\":\"measures/calculations.Total Revenue\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_date\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Revenue MoM %\"},\"Name\":\"measures/calculations.Revenue MoM %\",\"NativeReferenceName\":\"Revenue MoM %\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"month_name\"},\"Name\":\"dim_date.month_name\",\"NativeReferenceName\":\"month_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"month\"},\"Name\":\"dim_date.month\",\"NativeReferenceName\":\"month\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total Revenue\"},\"Name\":\"measures/calculations.Total Revenue\",\"NativeReferenceName\":\"Total Revenue\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"month\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"month_name\"}}}]},\"columnProperties\":{\"dim_date.month\":{\"displayName\":\" \"},\"dim_date.month_name\":{\"displayName\":\"Month\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'MoM Revenue Trend'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 432.00,
+          "width": 704.00,
+          "x": 0.00,
+          "y": 288.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c260e0fc309455ae0a30\",\"layouts\":[{\"id\":0,\"position\":{\"x\":960,\"y\":96,\"z\":6000,\"width\":312,\"height\":168,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"measures/calculations.Weekend Trip Share\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"measures/calculations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Weekend Trip Share\"},\"Name\":\"measures/calculations.Weekend Trip Share\",\"NativeReferenceName\":\"Weekend Trip Share\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Weekend Trip Share\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 168.00,
+          "width": 312.00,
+          "x": 960.00,
+          "y": 96.00,
+          "z": 6000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
