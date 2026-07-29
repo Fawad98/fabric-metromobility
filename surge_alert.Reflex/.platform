@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Reflex",
+    "displayName": "surge_alert"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93dbafb2-4f65-a541-4c79-1cfb64b97a09"
+  }
+}

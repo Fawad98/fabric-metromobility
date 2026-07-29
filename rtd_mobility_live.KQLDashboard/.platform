@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "rtd_mobility_live",
+    "description": "rtd_mobility_live"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7157afb7-0cad-9051-405a-8b729987e740"
+  }
+}

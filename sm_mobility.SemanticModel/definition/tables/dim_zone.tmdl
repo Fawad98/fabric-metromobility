@@ -1,0 +1,48 @@
+table dim_zone
+	lineageTag: 8940cb2a-2fbb-42d4-87d3-22f5d0a874e0
+	sourceLineageTag: [gold].[dim_zone]
+
+	column zone_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ca898495-d5ad-48df-aae7-8c29c4588c60
+		sourceLineageTag: zone_id
+		summarizeBy: none
+		sourceColumn: zone_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column borough
+		dataType: string
+		lineageTag: 3d26e8fd-02d7-4b2f-a42e-61fdbd02ddb8
+		sourceLineageTag: borough
+		summarizeBy: none
+		sourceColumn: borough
+
+		annotation SummarizationSetBy = Automatic
+
+	column zone_name
+		dataType: string
+		lineageTag: b065a765-e6e8-4f3e-81c5-8b6c97da2c22
+		sourceLineageTag: zone_name
+		summarizeBy: none
+		sourceColumn: zone_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_zone
+		dataType: string
+		lineageTag: 293c5d5b-e1f3-403b-ad40-01019dc8d2ad
+		sourceLineageTag: service_zone
+		summarizeBy: none
+		sourceColumn: service_zone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_zone = entity
+		mode: directLake
+		source
+			entityName: dim_zone
+			schemaName: gold
+			expressionSource: 'DirectLake - lh_mobility'
+

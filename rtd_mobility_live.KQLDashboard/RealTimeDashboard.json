@@ -1,0 +1,262 @@
+{
+  "schema_version": 77,
+  "changeDetection": {
+    "kind": "liveUpdates",
+    "fallbackRefreshRate": "5m",
+    "minRefreshRate": "30s"
+  },
+  "tiles": [
+    {
+      "id": "00cbd60a-42f5-404e-9cac-f038d2a4640c",
+      "title": "Ride volume (live)",
+      "visualType": "timechart",
+      "pageId": "cab79cd9-c918-4b39-a23b-08973b7f1b60",
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "928fb274-337d-4cee-95be-6c61fe45157d"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "2f86fcd8-124f-467e-a70d-a95f2ea16cc3",
+      "title": "Top pickup zones",
+      "visualType": "bar",
+      "pageId": "cab79cd9-c918-4b39-a23b-08973b7f1b60",
+      "layout": {
+        "x": 9,
+        "y": 7,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "f0d2069d-8e32-480c-a9d9-1d1632d8dda6"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "d9f79854-179d-4837-92e5-c6691ec9daca",
+      "title": "Ride status breakdown",
+      "visualType": "pie",
+      "pageId": "cab79cd9-c918-4b39-a23b-08973b7f1b60",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "cc5016e0-eebd-4c53-828a-f5e438289ea7"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": [
+          "name",
+          "percentage"
+        ],
+        "tooltipDisabled": false,
+        "pie__tooltip": [
+          "name",
+          "percentage",
+          "value"
+        ],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "eada0bee-ee5b-4cb6-9754-2bb5e6fd7a0d",
+      "title": "Average surge multiplier (live)",
+      "visualType": "timechart",
+      "pageId": "cab79cd9-c918-4b39-a23b-08973b7f1b60",
+      "layout": {
+        "x": 0,
+        "y": 7,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0c9aeb64-0ff3-4f3d-a65b-16352351c20b"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "6ee5230b-7dce-4bdd-b7d9-becf77dd7adf",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "clusterUri": "",
+      "name": "eh_mobility_rt",
+      "databaseArtifactId": "9f5fa191-91a9-4f49-889e-7c15d2a66357",
+      "database": "d2a66357-7c15-889e-4f49-91a99f5fa191",
+      "workspace": "00000000-0000-0000-0000-000000000000",
+      "id": "bcb09f9c-acbc-49be-a08b-481d9e42cf54"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Live Ride Telemetry",
+      "id": "cab79cd9-c918-4b39-a23b-08973b7f1b60"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "bcb09f9c-acbc-49be-a08b-481d9e42cf54"
+      },
+      "text": "ride_events\r\n| where event_ts > ago(30m)\r\n| summarize rides = count() by bin(event_ts, 1m)\r\n| render timechart",
+      "id": "928fb274-337d-4cee-95be-6c61fe45157d",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "bcb09f9c-acbc-49be-a08b-481d9e42cf54"
+      },
+      "text": "ride_events\r\n  | where event_ts > ago(15m)\r\n  | summarize avg_surge = avg(surge_multiplier), rides = count() by pickup_zone_id\r\n  | order by rides desc\r\n  | take 10",
+      "id": "f0d2069d-8e32-480c-a9d9-1d1632d8dda6",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "bcb09f9c-acbc-49be-a08b-481d9e42cf54"
+      },
+      "text": "ride_events\r\n| where event_ts > ago(15m)\r\n| summarize count() by status\r\n| render piechart",
+      "id": "cc5016e0-eebd-4c53-828a-f5e438289ea7",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "bcb09f9c-acbc-49be-a08b-481d9e42cf54"
+      },
+      "text": "ride_events\r\n| where event_ts > ago(30m)\r\n| summarize avg_surge = avg(surge_multiplier) by bin(event_ts, 1m)\r\n| render timechart",
+      "id": "0c9aeb64-0ff3-4f3d-a65b-16352351c20b",
+      "usedVariables": []
+    }
+  ],
+  "embeddedApps": []
+}

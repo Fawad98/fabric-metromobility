@@ -1,0 +1,12 @@
+relationship 817b8866-b1c8-977d-a150-33ed759b03f4
+	fromColumn: fact_trips.date_key
+	toColumn: dim_date.date_key
+
+relationship 22cb7ab9-d677-790e-fa03-846566b6cefa
+	fromColumn: fact_trips.pickup_zone_id
+	toColumn: dim_zone.zone_id
+
+relationship 9bbe23b6-e25e-94cc-7efe-af05a73f29cd
+	fromColumn: fact_trips.payment_type_id
+	toColumn: dim_payment.payment_type_id
+
