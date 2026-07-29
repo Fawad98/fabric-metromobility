@@ -31,4 +31,4 @@ jobs:
         run: fab ls "ws-metromobility-dev.Workspace"
 
       - name: Trigger batch pipeline
-        run: fab run "ws-metromobility-dev.Workspace/pl_ingest_batch.DataPipeline"
+        run: fab job run "ws-metromobility-dev.Workspace/pl_ingest_batch.DataPipeline"
