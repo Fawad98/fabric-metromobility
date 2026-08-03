@@ -93,8 +93,7 @@ A Python simulator running in a **cloud Codespace** streams synthetic ride telem
 A **Real-Time Dashboard** with auto-refresh shows live ride volume, surge, and status.
 
 ![Eventstream canvas](docs/images/eventstream-canvas.png)
-![Real-Time Dashboard](docs/images/realtime-dashboard.png)
-![Activator alert email](docs/images/activator-alert.png)
+![Real-Time Dashboard](docs/images/realtime-dash.png)
 
 ### Serving — Direct Lake + Warehouse
 
