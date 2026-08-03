@@ -20,7 +20,7 @@ The entire platform — including the streaming data generator — was built in 
 
 ## Architecture
 
-![Architecture diagram](docs/images/architecture.png)
+![Architecture diagram](docs/images/architecture.gif)
 
 ```
                         ┌─────────────────────────────────────────────────┐
